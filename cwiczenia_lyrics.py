@@ -12,4 +12,8 @@ url = "https://raw.githubusercontent.com/kflisikowsky/sad/refs/heads/main/data/b
 response = req.get(url, verify=False)
 df_lyrics = StringIO(response.text)
 df_lyrics = pd.read_csv(df_lyrics, sep=",")
-print(df_lyrics.head(3))
+print(df_lyrics.head(5))
+
+#print(df_lyrics.shape)
+print('--------------------------------------')
+print(df_lyrics['artist'].head(5))
