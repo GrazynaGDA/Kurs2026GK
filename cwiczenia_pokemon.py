@@ -22,5 +22,18 @@ df_pokemony = pd.read_csv("pokemon_lok.csv")
 
 
 ## Ile jest legendarnych pokemonów?
-ile = (df_pokemony[df_pokemony['Legendary']==True]).sum()
-print("legendarnych pokemonów jest ",ile["Legendary"])
+# # ile = (df_pokemony[df_pokemony['Legendary']==True]).sum()
+# print("legendarnych pokemonów jest ",ile["Legendary"])
+
+# grupowanie i wykonanie obliczenia dla grupy
+# mmean Attack by Legendary
+# Tutaj składnia [[...]] po prostu ogranicza kolumny w DataFrame do tych, 
+# na których nam bezpośrednio zależy.
+# print (df_pokemony[['Legendary', 'Attack']].groupby("Legendary").mean())
+
+# Jak obliczyć medianę Obrony według statusu Legendarnego?
+# print (df_pokemony[['Legendary', 'Defense']].groupby("Legendary").median())
+
+# Jak obliczyć średnią HP dla Typu 1
+print (df_pokemony[['Type 1', 'HP']].groupby("Type 1").mean())
+
